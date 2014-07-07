@@ -12,7 +12,7 @@ before_script:
   - "cd .."
 
 script:
-  - "    make all \
+  - "    make ALL_TARGETS=afro_nfet.hex binary_zip \
       && echo pass:$e >> results \
       || echo fail:$e >> results \
     "
