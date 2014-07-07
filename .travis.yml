@@ -1,6 +1,7 @@
 language: python
 before_script:
   - "sudo apt-get install avra=1.3.0-1"
+  - "apt-cache madison avra"
 script:
   - "    make all \
       && echo pass:$e >> results \
