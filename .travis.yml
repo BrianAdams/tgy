@@ -1,0 +1,14 @@
+language: python
+before_script:
+  - "sudo apt-get install avra"
+script:
+  - "    make all \
+      && echo pass:$e >> results \
+      || echo fail:$e >> results \
+    "
+  - "cat results"
+  - "cut -d: -f1 results | sort | uniq -c"
+  - "test `grep -c fail results` -eq 0"
+
+env:
+  - WHATEVER='1.0.5'
