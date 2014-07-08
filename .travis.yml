@@ -18,7 +18,7 @@ script:
 - 'cut -d: -f1 results | sort | uniq -c'
 - test `grep -c fail results` -eq 0
 env:
-- WHATEVER='1.0.5'
+- WHATEVER='1.0.6'
 deploy:
   provider: releases
   api_key:
