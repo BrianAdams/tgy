@@ -18,7 +18,7 @@ script:
 - 'cut -d: -f1 results | sort | uniq -c'
 - test `grep -c fail results` -eq 0
 env:
-- WHATEVER='1.0.6'
+- WHATEVER='1.0.7'
 deploy:
   provider: releases
   api_key:
@@ -27,4 +27,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: BrianAdams/tgy
+    tags: true
     all_branches: true
