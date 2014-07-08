@@ -28,3 +28,4 @@ deploy:
   on:
     repo: BrianAdams/tgy
     branch: feature-ci-builds
+    tags: true
