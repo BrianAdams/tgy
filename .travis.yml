@@ -27,5 +27,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: BrianAdams/tgy
-    branch: feature-ci-builds
-    tags: true
+    all_branches: true
